@@ -1,24 +1,28 @@
-import { useState } from 'react';
-import './App.css';
-import { AppContainer, Box, LeftBox, Header, RightBox } from './styles/Styles';
-import Notebook from './components/Notebook';
+import { Header } from './styles/Styles';
+import Animation from './components/Animation';
+import AllTodos from './components/AllTodos';
+import { Box } from '@chakra-ui/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 function App() {
 
   return (
-    <AppContainer>
-      <Header> My Todo List</Header>
-      <Box>
-        <LeftBox>
-          <Notebook />
-        </LeftBox>
-        <RightBox>
-
-        </RightBox>
+      <Box textAlign='center'>
+        <Header>My Todo List</Header>
+        <Box display='flex'>
+            <Box flex='0.35'>
+              <Animation />
+            </Box>
+            <Box flex='0.65'>
+              <QueryClientProvider client={queryClient}>
+                <AllTodos />
+              </QueryClientProvider>
+            </Box>
+          </Box>
       </Box>
-    </AppContainer>
-
-  )
+  );
 }
 
 export default App;

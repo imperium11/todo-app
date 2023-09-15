@@ -1,9 +1,9 @@
-import lottie from 'lottie-react';
 import animationData from '../assets/animation_todo.json';
 import Lottie from 'lottie-react';
+import { useRef } from 'react';
 
+function Animation() {
 
-function Notebook() {
   return (
     <>
       <Lottie animationData={animationData}/>
@@ -11,4 +11,4 @@ function Notebook() {
   );
 }
 
-export default Notebook;
+export default Animation;

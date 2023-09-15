@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
 const pool = require('./db/db.js');
+const cors = require('cors')
 
 app.use(express.json());
-
+app.use(cors());
 // Create a todo
 app.post('/todos', async (req, res) => {
   try {
