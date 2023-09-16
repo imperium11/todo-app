@@ -22,14 +22,14 @@ function AllTodos() {
   return (
     <Container fontWeight='600'>
       <InputTodo />
-      <Stack spacing='10px' mt='40px' overscrollY='auto'>
+      <Stack spacing='10px' mt='40px' overflowY='auto' h='50vh'>
         {todos?.map(todo => {
           return (
             <Box key={todo.t_id} bgColor='option.5' border='2px solid' borderRadius='5px'>
               <Flex justifyContent='space-between' alignItems='center' padding='5px 5px' color='option.8'>
-                <Flex w='53px' justifyContent='space-between'>
+                <Flex>
                   <Checkbox size='lg' borderColor='option.8'></Checkbox>
-                  <Box fontSize='large'>{todo.t_title}</Box>
+                  <Box marginLeft='5px' fontSize='large'>{todo.t_title}</Box>
                 </Flex>
                 <Box>{formatDate(todo.t_date)}</Box>
               </Flex>
