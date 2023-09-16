@@ -34,7 +34,7 @@ function AllTodos() {
                 <Box>{formatDate(todo.t_date)}</Box>
               </Flex>
               <Flex justifyContent='space-between' alignItems='center' padding='5px 5px'>
-                <Box  fontWeight='normal'>{todo.t_description}</Box>
+                <Box w='370px' fontWeight='normal' textAlign='start'>{todo.t_description}</Box>
                 <Flex  justifyContent='space-between' w='120px'>
                   <Button bgColor='option.4' size='sm'>Edit</Button>
                   <Button bgColor='option.7' size='sm'>Delete</Button>
