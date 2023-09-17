@@ -18,7 +18,7 @@ function InputTodo() {
   const { register, handleSubmit, reset } = useForm();
 
   const formSubmit = (data) => {
-    //
+    
     console.log('data', data);
     onClose();
     reset();
