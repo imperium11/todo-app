@@ -9,4 +9,3 @@ export const formatDate = (d) => {
          date.getFullYear();
   }
 }
-

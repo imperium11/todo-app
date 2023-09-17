@@ -4,14 +4,14 @@ import InputTodo from './InputTodo';
 import { useState } from 'react';
 import { Box, Button, ButtonGroup, Checkbox, Container, Flex, Stack } from '@chakra-ui/react';
 import { useQuery } from '@tanstack/react-query';
-import { formatDate } from '../helpers/Helpers';
+import { getAllTodos } from '../helpers/Crud';
+import { formatDate } from '../helpers/Date';
+import DeleteTodo from './DeleteTodo';
 
 function AllTodos() {
 
   const { data: todos, isLoading } = useQuery({
-    queryFn: () =>
-      axios.get('http://localhost:3000/todos')
-        .then(result => result.data),
+    queryFn: () => getAllTodos(),
     queryKey: ['todos']
   });
 
@@ -28,7 +28,7 @@ function AllTodos() {
             <Box key={todo.t_id} bgColor='option.5' border='2px solid' borderRadius='5px'>
               <Flex justifyContent='space-between' alignItems='center' padding='5px 5px' color='option.8'>
                 <Flex>
-                  <Checkbox size='lg' borderColor='option.8'></Checkbox>
+                  <Checkbox colorScheme='facebook' size='lg' borderColor='option.8'></Checkbox>
                   <Box marginLeft='5px' fontSize='large'>{todo.t_title}</Box>
                 </Flex>
                 <Box>{formatDate(todo.t_date)}</Box>
@@ -36,8 +36,8 @@ function AllTodos() {
               <Flex justifyContent='space-between' alignItems='center' padding='5px 5px'>
                 <Box w='370px' fontWeight='normal' textAlign='start'>{todo.t_description}</Box>
                 <Flex  justifyContent='space-between' w='120px'>
-                  <Button bgColor='option.4' size='sm'>Edit</Button>
-                  <Button bgColor='option.7' size='sm'>Delete</Button>
+                  <EditTodo />
+                  <DeleteTodo t_id={todo.t_id}/>
                 </Flex>
               </Flex>
             </Box>

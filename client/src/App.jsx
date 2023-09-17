@@ -9,6 +9,7 @@ const queryClient = new QueryClient();
 function App() {
 
   return (
+    <QueryClientProvider client={queryClient}>
       <Box textAlign='center'>
         <Header>My Todo List</Header>
         <Flex>
@@ -16,12 +17,11 @@ function App() {
             <Animation />
           </Box>
           <Box flex='0.65' display='flex' justifyContent='center' alignItems='center'>
-            <QueryClientProvider client={queryClient}>
               <AllTodos />
-            </QueryClientProvider>
           </Box>
         </Flex>
       </Box>
+    </QueryClientProvider>
   );
 }
 

@@ -7,4 +7,6 @@ export const Header = styled.div`
   font-family: 'Tahu';
 `;
 
-
+export const FormBox = styled.form`
+  
+`;
