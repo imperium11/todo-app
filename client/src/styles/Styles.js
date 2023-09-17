@@ -6,7 +6,3 @@ export const Header = styled.div`
   font-size: 90px;
   font-family: 'Tahu';
 `;
-
-export const FormBox = styled.form`
-  
-`;

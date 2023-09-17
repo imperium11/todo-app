@@ -10,7 +10,6 @@ export const getAllTodos = async() => {
 }
 
 export const addTodo = async(todo) => {
-  console.log('add a todo: ', todo);
   return await todosApi.post('/todos', todo);
 }
 
