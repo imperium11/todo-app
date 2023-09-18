@@ -1,5 +1,5 @@
 # My Todo List
-![Screenshot from 2023-09-17 15-51-55](https://github.com/imperium11/todo-app/assets/81498700/28b3dd00-3cf9-45cd-8156-414fb45def07)
+![Screenshot from 2023-09-17 15-54-18](https://github.com/imperium11/todo-app/assets/81498700/55cff45f-3e14-4bd8-9e29-4686376744c0)
 
 ## Tech Stack
 ![image](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)![image](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white)![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)![image](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
