@@ -19,7 +19,7 @@ function InputTodo() {
   const queryClient = useQueryClient();
   const addTodoMutation = useMutation(addTodo, {
     onSuccess: () => {
-      //Invalidate cache and refetch updated todo list
+      //Invalidate cache and refetch
       queryClient.invalidateQueries('todos');
     }
   });

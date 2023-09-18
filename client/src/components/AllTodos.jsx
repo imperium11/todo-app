@@ -36,7 +36,7 @@ function AllTodos() {
               <Flex justifyContent='space-between' alignItems='center' padding='5px 5px'>
                 <Box w='370px' fontWeight='normal' textAlign='start'>{todo.t_description}</Box>
                 <Flex  justifyContent='space-between' w='120px'>
-                  <EditTodo />
+                  <EditTodo todo={todo}/>
                   <DeleteTodo t_id={todo.t_id}/>
                 </Flex>
               </Flex>

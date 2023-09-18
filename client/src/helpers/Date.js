@@ -1,7 +1,8 @@
 export const formatDate = (d) => {
   let date = new Date(d.slice(0, 10));
   if (!isNaN(date.getTime())) {
-      let day = date.getDate().toString();
+      let day = date.getDate() + 1;
+      day = day.toString();
       let month = (date.getMonth() + 1).toString();
 
       return (month[1] ? month : '0' + month[0]) + '/' +

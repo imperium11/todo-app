@@ -13,8 +13,8 @@ export const addTodo = async(todo) => {
   return await todosApi.post('/todos', todo);
 }
 
-export const updateTodo = async(id) => {
-  return await todosApi.put(`/todos/${id}`);
+export const updateTodo = async(todo) => {
+  return await todosApi.put(`/todos/${todo.id}`, todo);
 }
 
 export const deleteTodo = async(id) => {
